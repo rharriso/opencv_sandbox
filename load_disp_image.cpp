@@ -2,7 +2,6 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
-
 using namespace cv;
 using namespace std;
 
@@ -19,7 +18,7 @@ int main(int argc, char** argv) {
         cout << "Couldn't open the image: " << argv[1] << endl;
     }
 
-    namedWindow("Display Window", WINDOW_AUTOSIZE);
+    namedWindow("Display Window", WINDOW_NORMAL | WINDOW_OPENGL);
     imshow("Display Window", image);
 
     waitKey(0);
