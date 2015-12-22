@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/load_disp_image.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/load_modify_save.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mat.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scan_image.cpp" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

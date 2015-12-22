@@ -16,3 +16,6 @@ target_link_libraries(load_modify_save ${OpenCV_LIBS})
 
 add_executable(mat mat.cpp)
 target_link_libraries(mat ${OpenCV_LIBS})
+
+add_executable(scan_image scan_image.cpp)
+target_link_libraries(scan_image ${OpenCV_LIBS})
