@@ -41,11 +41,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43628949-1e29-439c-bbe5-2951480aa418" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scan_image.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/opencv_sandbox.iml" afterPath="$PROJECT_DIR$/.idea/opencv_sandbox.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mat.cpp" afterPath="$PROJECT_DIR$/mat.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scan_image.cpp" afterPath="$PROJECT_DIR$/scan_image.cpp" />
     </list>
     <ignored path="opencv_sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,8 +65,8 @@
       <file leaf-file-name="scan_image.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scan_image.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5786802">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.39593908">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
               <folding>
                 <element signature="e#42#61#0" expanded="true" />
               </folding>
@@ -366,8 +362,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scan_image.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5786802">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.39593908">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
           <folding>
             <element signature="e#42#61#0" expanded="true" />
           </folding>

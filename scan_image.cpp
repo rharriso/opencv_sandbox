@@ -11,8 +11,7 @@
 using namespace std;
 using namespace cv;
 
-shared_ptr<Mat> ScanImageAndReduceC(shared_ptr<Mat> I, shared_ptr<vector<uchar>> table);
-shared_ptr<Mat> ScanImageAndReduceIterator(shared_ptr<Mat> I, shared_ptr<vector<uchar>> table);
+shared_ptr<Mat> scan_and_reduce_color_space(shared_ptr<Mat> I, shared_ptr<vector<uchar>> table);
 
 int main(int argc, char **argv) {
     if (argc != 3) {
@@ -43,7 +42,7 @@ int main(int argc, char **argv) {
         return divideWith * ((++index) / divideWith);
     });
 
-    auto reducedImage = ScanImageAndReduceIterator(image, table);
+    auto reducedImage = scan_and_reduce_color_space(image, table);
 
     namedWindow("Display Window", WINDOW_NORMAL | WINDOW_OPENGL);
     imshow("Display Window", *reducedImage.get());
@@ -52,32 +51,7 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-shared_ptr<Mat> ScanImageAndReduceC(shared_ptr<Mat> I, shared_ptr<vector<uchar>> table) {
-    // accept only char type matrices
-    CV_Assert(I->depth() != sizeof(uchar));
-
-    int channels = I->channels();
-
-    int nRows = I->rows;
-    int nCols = I->cols * channels;
-
-    if (I->isContinuous()) {
-        nCols *= nRows;
-        nRows = 1;
-    }
-
-    int i, j;
-    uchar *p;
-    for (i = 0; i < nRows; ++i) {
-        p = I->ptr<uchar>(i);
-        for (j = 0; j < nCols; ++j) {
-            p[j] = table->at(p[j]);
-        }
-    }
-    return I;
-}
-
-shared_ptr<Mat> ScanImageAndReduceIterator(shared_ptr<Mat> I, shared_ptr<vector<uchar>> table) {
+shared_ptr<Mat> scan_and_reduce_color_space(shared_ptr<Mat> I, shared_ptr<vector<uchar>> table) {
     // accept only char type matrices
     CV_Assert(I->depth() != sizeof(uchar));
 
