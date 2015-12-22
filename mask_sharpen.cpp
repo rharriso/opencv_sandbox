@@ -14,7 +14,7 @@ using namespace cv;
 
 int main(int argc, char **argv) {
     if (argc != 2) {
-        cout << " Usage: masks image_to_sharpen" << endl;
+        cout << " Usage: mask_sharpen image_to_sharpen" << endl;
         return -1;
     }
 

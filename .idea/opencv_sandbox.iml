@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/load_disp_image.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/load_modify_save.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/masks.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/mask_sharpen.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/mat.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/scan_image.cpp" isTestSource="false" />
     </content>
