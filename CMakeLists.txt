@@ -19,3 +19,6 @@ target_link_libraries(mat ${OpenCV_LIBS})
 
 add_executable(scan_image scan_image.cpp)
 target_link_libraries(scan_image ${OpenCV_LIBS})
+
+add_executable(masks masks.cpp)
+target_link_libraries(masks ${OpenCV_LIBS})
