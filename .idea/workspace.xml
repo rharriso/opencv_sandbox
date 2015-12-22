@@ -40,9 +40,7 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43628949-1e29-439c-bbe5-2951480aa418" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scan_image.cpp" afterPath="$PROJECT_DIR$/scan_image.cpp" />
-    </list>
+    <list default="true" id="43628949-1e29-439c-bbe5-2951480aa418" name="Default" comment="" />
     <ignored path="opencv_sandbox.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +63,8 @@
       <file leaf-file-name="scan_image.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scan_image.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39593908">
-              <caret line="13" column="85" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.4568528">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="e#42#61#0" expanded="true" />
               </folding>
@@ -362,8 +360,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scan_image.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39593908">
-          <caret line="13" column="85" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.4568528">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding>
             <element signature="e#42#61#0" expanded="true" />
           </folding>
