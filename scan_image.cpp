@@ -11,7 +11,7 @@
 using namespace std;
 using namespace cv;
 
-shared_ptr<Mat> scan_and_reduce_color_space(shared_ptr<Mat> I, shared_ptr<vector<uchar>> table);
+shared_ptr<Mat> scan_and_reduce_color_space(const Mat &I, const vector<uchar> &table);
 
 int main(int argc, char **argv) {
     if (argc != 3) {
@@ -19,9 +19,9 @@ int main(int argc, char **argv) {
         return -1;
     }
 
-    auto image = make_shared<Mat>(imread(argv[1], CV_LOAD_IMAGE_COLOR));
+    auto image = imread(argv[1], CV_LOAD_IMAGE_COLOR);
 
-    if (!image->data) {
+    if (!image.data) {
         cout << "Couldn't open the image: " << argv[1] << endl;
         return -1;
     }
@@ -36,9 +36,9 @@ int main(int argc, char **argv) {
         return -1;
     }
 
-    auto table = make_shared<vector<uchar>>(vector<uchar>(256));
+    auto table = vector<uchar>(vector<uchar>(256));
     uchar index = 0;
-    generate(table->begin(), table->end(), [&divideWith, &index](){
+    generate(table.begin(), table.end(), [&divideWith, &index](){
         return divideWith * ((++index) / divideWith);
     });
 
@@ -51,25 +51,26 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-shared_ptr<Mat> scan_and_reduce_color_space(shared_ptr<Mat> I, shared_ptr<vector<uchar>> table) {
+shared_ptr<Mat> scan_and_reduce_color_space(const Mat &I, const vector<uchar> &table) {
     // accept only char type matrices
-    CV_Assert(I->depth() != sizeof(uchar));
+    CV_Assert(I.depth() != sizeof(uchar));
+    auto result = make_shared<Mat>(I.clone());
 
-    const int channels = I->channels();
+    const int channels = I.channels();
 
     switch (channels) {
         case 1: {
-            transform(I->begin<uchar>(), I->end<uchar>(), I->begin<uchar>(), [&table](uchar p){
-                return table->at(p);
+            transform(I.begin<uchar>(), I.end<uchar>(), result->begin<uchar>(), [&table](uchar p){
+                return table.at(p);
             });
         }
         case 3: {
-            transform(I->begin<Vec3b>(), I->end<Vec3b>(), I->begin<Vec3b>(), [&table](Vec3b p) {
-                return Vec3b(table->at(p[0]), table->at(p[1]),table->at(p[2]));
+            transform(I.begin<Vec3b>(), I.end<Vec3b>(), result->begin<Vec3b>(), [&table](Vec3b p) {
+                return Vec3b(table.at(p[0]), table.at(p[1]),table.at(p[2]));
             });
         }
     }
 
-    return I;
+    return result;
 }
 
