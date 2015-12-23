@@ -22,3 +22,6 @@ target_link_libraries(scan_image ${OpenCV_LIBS})
 
 add_executable(mask_sharpen mask_sharpen.cpp)
 target_link_libraries(mask_sharpen ${OpenCV_LIBS})
+
+add_executable(adding_images adding_images.cpp)
+target_link_libraries(adding_images ${OpenCV_LIBS})
